@@ -1,0 +1,151 @@
+
+<!-- Main Page  -->
+
+<!-- User can Login their account using respective username& password saved in database-->
+<html>
+    <head>
+        
+        <!-- Substituting Webpage Header -->
+        <title>Log-in</title>
+        <link rel="shortcut icon" href="company_logo.png" type="image/x-icon">
+        <style>
+            
+            /* Designing Webpage Body */
+            body{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                background-color: rgb(205, 248, 205);
+            }
+
+            /* Designing the container of webpage */
+            .container{
+                margin: 10px;
+                border-radius: 10px;
+                padding: 35px 45px;
+                background-color: rgb(78, 200, 78);
+                border-radius: 30px;
+                font-size: 35;
+                font-family: 'Times New Roman', Times, serif;
+                box-shadow: 5px 5px 15px black;
+                text-align: center;
+            }
+
+            /* Designing the head text which is the company Logo */
+            .head{
+                text-align: center;
+                color: #fe5e04;
+                font-weight: 550;
+                font-size: 45px;
+            }
+
+            /* Designing the Button */
+            button{
+                background-color: lightblue;
+                color: black;
+                font-weight: 800;
+                font-size: 17;
+                font-family: 'Times New Roman', Times, serif;
+                padding: 8 20 ;
+                margin-top: 20;
+                border-radius: 12px;
+                border: 0;
+            }
+            .sign-up
+            {
+                background-color: lightcoral;
+            }
+            button:hover{
+                border: 5;
+                box-shadow: 2.5px 2.5px 7.5px black;
+            }
+
+            /* Making the input boxes interactive and User Friendly */
+            .inputbox{
+                position: relative;
+                width: 100%;
+                margin-top: 20px;
+            }
+            .inputbox input{
+                position: relative;
+                font-family: 'Times New Roman', Times, serif;
+                width: 100%;
+                padding: 10px 10px 12px;
+                background: transparent;
+                border: none;
+                outline: none;
+                color: black;
+                font-size: 30px;
+                letter-spacing: 0.06em;
+                z-index: 10;
+            }
+            .inputbox span{
+                position: absolute;
+                left: 0;
+                padding: 20px 10px 10px;
+                font-size: 1em;
+                color: black;
+                pointer-events: none;
+                letter-spacing: 0.05em;
+                transition: 0.75s;
+            }
+            .inputbox input:valid ~ span,
+            .inputbox input:focus ~ span {
+                color: black;
+                transform: translateX(-10px) translateY(-34px);
+                font-size: 0.75em
+            }
+            .inputbox i{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 3px;
+                background: rgb(174, 241, 166);
+                border-radius: 10px;
+                transition: 0.75s;
+                pointer-events: none;
+                z-index: 9;
+            }
+            .inputbox input:valid ~ i,
+            .inputbox input:focus ~ i 
+            {
+                height:45px;
+            }
+        </style>
+    </head>
+
+    <!-- Main Body -->
+    <body>
+
+        <!-- Introducing Company Logo at the top of webpage -->
+        <div class="head">
+            <img src="company_logo.png" height="220" width="390"><br>
+            KALAM ACADEMY RANCHI...
+        </div>
+
+        <!-- Container having the inputs and buttons to check the user data -->
+        <div class="container">
+
+            <!-- interactive input boxes -->
+            <div class="inputbox">
+                <input type="text" required="required" name="uname", autocomplete="off">
+                <span>USERNAME:  </span>
+                <i></i>
+            </div>
+            <div class="inputbox">
+                <input type="password" required="required" name="pass", autocomplete="off">
+                <span>PASSWORD: </span>
+                <i></i>
+            </div>
+
+            <!-- Interactive Buttons -->
+            <!-- Linking the below button to main page -->
+            <button type="button"><a href="main.html" style="text-decoration: none; color: black;">LOG-IN</a></button>
+            
+            <!-- Linking the below button to sign-up page -->
+            <button class="sign-up" type="button"><a href="sign-up.html" style="text-decoration: none; color: black;">Sign-up</a></button>
+        </div>
+    </body>
+</html>
