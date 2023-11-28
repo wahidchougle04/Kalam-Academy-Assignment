@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>MAIN PAGE</title>
+        <link rel="shortcut icon" href="company_logo.png" type="image/x-icon">
+        <style>
+          body{
+            background-color:  rgb(205, 248, 205);
+          }
+          .container{
+            background-color:  rgb(205, 248, 205);
+            display: flex;
+            width: 100%;
+          }
+          .updates{
+            flex-grow: 1;
+          }
+          textarea{
+            background-color: white;
+            resize: none; 
+            width: 300px;
+            height: 100;
+          }
+          a{
+            text-decoration: none;
+            color: black;
+          }
+        </style>
+        <script type="text/javascript">
+            function post(){
+                var a = '';
+                var b=0;
+                let user="Wahid"
+                c=document.getElementById("posted");
+                if( c != b){
+                    let post = document.getElementById('posted');
+                    let postval = post.value;
+                    let user="Wahid"
+                    let msg = document.getElementById("msg");
+                    msg.innerText = postval;
+                    let usr = document.getElementById("user");
+                    usr.innerText = user;
+                }
+            }
+        </script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>  <title><?php $_SESSION['username']?></title>
+      </head>
+    <body style="background:  rgb(205, 248, 205);"> 
+        <nav class="navbar bg-body-tertiary" style="padding: 0;">
+            <div class="bg-dark container-fluid" data-bs-theme="dark">
+              <a class="bg-dark navbar-brand" style="color: white;" href="/Kalam Academy Project/main.php">Welcome <?php echo $_SESSION['username']?></a>
+              <form class="bg-dark d-flex">
+                <button class="btn btn-success navbar-btn" style="margin-top: 10; margin-right: 20;"><a href="friend.html" style="text-decoration: none; color:black; background-color: #198754; color:white;">FRIENDS</a></button>
+                <button class="btn btn-danger navbar-btn" style="margin-top: 10;" ><a href="index.html" style="text-decoration: none; color:black; background-color: #dc3545; color: white;"> LOGOUT</a></button>
+              </form>
+            </div>
+          </nav>
+            <div class="container">
+                <div class="updates">
+                    <h3>UPDATES<br></h3>
+                    <table>
+                        <tbody>
+                            <tr><td><h3><b><span id="msg"></span></b></h3></td></tr>
+                    <tr><td><h5><i><span id="user"></span></i></h5></td></tr>
+                    <tr><td><h3><b>Hey Whatsup</b></h3></td></tr>
+                    <tr><td><h5><i>John Wilson</i></h5></td></tr>
+                    </tbody>
+                    </table>
+                </div>
+                <form name="form1">
+                <div class="add-update">
+                    Post a new update<br>
+                    <div class="msgbox"><i><textarea placeholder="Type your status update here..." id="posted" oninput="getValue()"></textarea></i></div>
+                    <button type="button" class="btn btn-success navbar-btn" onclick="post()">POST</button>
+                </div>
+            </form>
+            </div>
+        </div>
+
+    </body>
+</html>
